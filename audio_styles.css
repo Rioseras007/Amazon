@@ -1,0 +1,36 @@
+/* =============================================
+   Audio: Music Toggle Button
+   ============================================= */
+
+.music-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+    background: linear-gradient(135deg, #232f3e, #131921);
+    border: 2px solid #f90;
+    color: #f90;
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.5), 0 0 10px rgba(255,153,0,0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    outline: none;
+}
+
+.music-btn:hover {
+    transform: scale(1.12);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.6), 0 0 18px rgba(255,153,0,0.5);
+    background: linear-gradient(135deg, #2d4058, #1a2634);
+}
+
+.music-btn.muted {
+    border-color: #888;
+    color: #888;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.4);
+}
