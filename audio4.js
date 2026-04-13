@@ -5,7 +5,7 @@
 
 (function () {
     // ── Background music ──────────────────────────────────────────────────────
-    const bgMusic = new Audio('audio/tema_01.mp3');
+    const bgMusic = new Audio('audio/tema_04.mp3');
     bgMusic.loop = true;
     bgMusic.volume = 0.4;
 
