@@ -18,8 +18,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
-<body>
+<body onmouseover="document.getElementById('musica').style.display = 'inline-block'" onmouseout="document.getElementById('musica').style.display = 'block'">
     <nav class="navbar">
+        <a href="#musica"><i class="bi bi-music-note-beamed"></i> Música de fondo</a>
         <a href="index.html" class="active"><i class="bi bi-controller"></i> Consolas</a>
         <a href="toplibros.html"><i class="bi bi-book"></i> Libros</a>
         <a href="topvideojuegos.html"><i class="bi bi-joystick"></i> Videojuegos</a>
@@ -33,7 +34,7 @@
         <a href="https://rioseras007.github.io/alfonsorubio/web/index.html"><i class="bi bi-disc"></i> Disco Patrulla Canina</a>
     </nav>
 
-    <div class="container">
+    <div class="container" >
         <h1><i class="bi bi-trophy-fill"></i> Top 10 Consolas Más Vendidas - 2026</h1>
         <p class="intro">Ranking premium basado en tendencias de ventas reales de Amazon.es. Desde la revolucionaria Nintendo Switch 2 hasta las potentes PS5 Pro y las nostálgicas máquinas retro. ¡Selección actualizada con los mejores precios!</p>
 
@@ -151,10 +152,13 @@
             <img src="retro.jpg" alt="Retro HDMI">
         </div>
 
-        <p class="footer-info">Lista actualizada en tiempo real: <a href="https://www.amazon.es/gp/bestsellers/videogames" target="_blank">Los más vendidos en Amazon.es > Videojuegos</a></p>
+        <p class="footer-info" >Lista actualizada en tiempo real: <a href="https://www.amazon.es/gp/bestsellers/videogames" target="_blank">Los más vendidos en Amazon.es > Videojuegos</a></p>
     </div>
     
-    <script src="audio.js"></script>
+   
+
+    <div class="musica" id="musica"><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2kd9EaOzjDmbjCxVRzarE6?utm_source=generator&theme=0" width="320px" height="150px" frameBorder="0" allowfullscreen=""  display="none" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+         loading="lazy"></iframe></div>
 </body>
 
 </html>
