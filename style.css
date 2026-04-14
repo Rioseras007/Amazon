@@ -377,3 +377,21 @@ img {
     h1 { font-size: 2em; }
     .top-item { padding: 20px; }
 }
+
+.musica {
+    position: relative
+    bottom: 20px;
+    right: 20px;
+    align-items: center;
+    display: block;
+    border: #1c2128 solid 1px;
+    border-radius: 12px;
+    align-items: center;
+    margin-left: 50%;
+   
+    transition: all var(--transition);
+    width: auto;
+    height: auto;
+   background: var(--bg);
+
+}
