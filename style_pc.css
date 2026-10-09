@@ -1,0 +1,274 @@
+/* ──────────────────────────────────────────
+   GAMING / RGB EFFECTS
+   ────────────────────────────────────────── */
+:root {
+    --rgb-gradient: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+    --neon-blue: #00f3ff;
+    --neon-purple: #bc13fe;
+}
+
+.gaming-card {
+    background: rgba(20, 24, 30, 0.8) !important;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 243, 255, 0.2) !important;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.gaming-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        from 0deg,
+        transparent,
+        var(--neon-blue),
+        transparent 30%
+    );
+    animation: rotate-border 4s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.gaming-card:hover::before {
+    opacity: 1;
+}
+
+.gaming-card:hover {
+    border-color: var(--neon-blue) !important;
+    box-shadow: 0 0 30px rgba(0, 243, 255, 0.3);
+}
+
+.gaming-card-inner {
+    position: relative;
+    background: var(--surface);
+    margin: 2px;
+    border-radius: 18px;
+    padding: 30px;
+    z-index: 1;
+}
+
+@keyframes rotate-border {
+    100% { transform: rotate(360deg); }
+}
+
+.rgb-text {
+    background: linear-gradient(to right, var(--neon-blue), var(--neon-purple), var(--neon-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: text-flow 3s linear infinite;
+}
+
+@keyframes text-flow {
+    to { background-position: 200% center; }
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.stat-item {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-item span {
+    display: block;
+    font-size: 0.8em;
+    color: var(--text-muted);
+}
+
+.stat-item strong {
+    color: var(--neon-blue);
+    font-size: 1.1em;
+}
+
+/* ──────────────────────────────────────────
+   COMPONENT SECTION
+   ────────────────────────────────────────── */
+.component-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.pc-specs {
+    margin-top: 30px;
+    border-left: 2px solid var(--accent);
+    padding-left: 20px;
+}
+
+.spec-line {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.spec-line i {
+    color: var(--accent);
+    margin-right: 10px;
+}
+
+/* ──────────────────────────────────────────
+   COMPONENT CARDS GRID
+   ────────────────────────────────────────── */
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    font-weight: 900;
+    margin: 60px 0 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(255, 153, 0, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+}
+
+.section-title i {
+    color: var(--accent);
+    filter: drop-shadow(0 0 8px rgba(255,153,0,0.5));
+}
+
+.components-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.comp-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.comp-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--neon-blue), var(--neon-purple));
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.comp-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255,153,0,0.5);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8), 0 0 25px rgba(255,153,0,0.15);
+}
+
+.comp-card:hover::before {
+    opacity: 1;
+}
+
+.comp-icon {
+    font-size: 2.5em;
+    color: var(--accent);
+    filter: drop-shadow(0 0 8px rgba(255,153,0,0.4));
+    line-height: 1;
+}
+
+.comp-label {
+    font-size: 0.78em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent);
+}
+
+.comp-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15em;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.3;
+}
+
+.comp-desc {
+    font-size: 0.9em;
+    color: var(--text-muted);
+    line-height: 1.7;
+    flex: 1;
+}
+
+.comp-price {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4em;
+    font-weight: 900;
+    color: var(--accent);
+}
+
+.comp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, var(--accent), var(--gold));
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 5px 15px rgba(255,153,0,0.3);
+    width: fit-content;
+}
+
+.comp-btn:hover {
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 12px 30px rgba(255,153,0,0.5);
+    filter: brightness(1.1);
+}
+
+.price-total-box {
+    background: linear-gradient(135deg, rgba(255,153,0,0.1), rgba(0,243,255,0.05));
+    border: 1px solid rgba(255,153,0,0.3);
+    border-radius: var(--radius);
+    padding: 30px 40px;
+    text-align: center;
+    margin: 0 0 60px;
+}
+
+.price-total-box .total-label {
+    font-size: 1em;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.price-total-box .total-price {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    font-weight: 900;
+    color: var(--accent);
+    text-shadow: 0 0 30px rgba(255,153,0,0.4);
+}
+
+@media (max-width: 768px) {
+    .components-grid {
+        grid-template-columns: 1fr;
+    }
+}
