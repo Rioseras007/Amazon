@@ -1,0 +1,42 @@
+.christmas-page{--forest:#123b35;--forest-dark:#0c2b27;--berry:#a62f3f;--berry-dark:#7e2330;--gold:#d7a94b;--snow:#fffdfa;--mist:#f4eee7;--ink:#202422;--muted:#716d66;max-width:1180px;margin:0 auto;padding:34px 28px 86px}
+.christmas-page a{color:inherit}
+.christmas-hero{position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr);gap:34px;min-height:440px;overflow:hidden;padding:58px 60px;border-radius:32px;background:radial-gradient(circle at 82% 18%,rgba(215,169,75,.3),transparent 25%),linear-gradient(135deg,var(--forest-dark),var(--forest));box-shadow:0 24px 60px rgba(18,59,53,.2);color:#fff}
+.christmas-hero:before,.christmas-hero:after{content:"";position:absolute;z-index:-1;border:1px solid rgba(255,255,255,.14);border-radius:50%}
+.christmas-hero:before{width:360px;height:360px;right:-130px;bottom:-170px}
+.christmas-hero:after{width:220px;height:220px;right:95px;top:-145px}
+.christmas-copy{align-self:center;max-width:650px}
+.christmas-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:17px;color:#f2d99a;font-size:.78rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase}
+.christmas-eyebrow span{width:28px;height:2px;background:var(--gold)}
+.christmas-copy h1{margin:0 0 20px;text-align:left;color:#fff;font-size:clamp(2.8rem,6vw,5.4rem);letter-spacing:-2.5px;line-height:.98}
+.christmas-copy h1 em{color:#f0c96f;font-style:normal}
+.christmas-copy>p:not(.christmas-eyebrow){max-width:570px;margin:0 0 27px;color:rgba(255,255,255,.76);font-size:1.04rem}
+.christmas-actions{display:flex;flex-wrap:wrap;align-items:center;gap:13px}
+.christmas-button{display:inline-flex;align-items:center;gap:9px;padding:13px 18px;border-radius:999px;background:#fff;color:var(--forest-dark)!important;font-size:.8rem;font-weight:800;transition:transform .2s ease,background .2s ease}
+.christmas-button:hover{transform:translateY(-3px);background:#f7d98d}
+.christmas-link{display:inline-flex;align-items:center;gap:7px;color:#f6e1ac!important;font-size:.8rem;font-weight:800}
+.christmas-art{position:relative;min-height:315px;align-self:center}
+.christmas-orbit{position:absolute;inset:13% 4% 6%;border:1px solid rgba(255,255,255,.2);border-radius:50%;transform:rotate(-12deg)}
+.christmas-orbit:before,.christmas-orbit:after{content:"✦";position:absolute;color:#f0c96f;font-size:1.5rem}
+.christmas-orbit:before{top:-12px;left:24%}.christmas-orbit:after{bottom:14px;right:3%}
+.christmas-gift{position:absolute;left:16%;bottom:10%;width:180px;height:158px;border-radius:8px 8px 15px 15px;background:linear-gradient(90deg,#ba3848 0 37%,#e6b44d 37% 57%,#ba3848 57%);box-shadow:0 25px 35px rgba(0,0,0,.22);transform:rotate(-7deg)}
+.christmas-gift:before{content:"";position:absolute;left:-13px;top:-24px;width:205px;height:38px;border-radius:8px;background:linear-gradient(90deg,#cb4151 0 36%,#edc261 36% 58%,#cb4151 58%);box-shadow:0 6px 0 rgba(0,0,0,.1)}
+.christmas-gift:after{content:"";position:absolute;left:69px;top:-50px;width:64px;height:54px;border:14px solid #edc261;border-bottom:0;border-radius:55px 55px 0 0;transform:rotate(8deg)}
+.christmas-bauble{position:absolute;right:9%;top:16%;width:74px;height:74px;border-radius:50%;background:radial-gradient(circle at 28% 25%,#fff4bf 0 7%,#d8a34b 8% 32%,#a62f3f 65%);box-shadow:0 15px 24px rgba(0,0,0,.18)}
+.christmas-bauble:before{content:"";position:absolute;left:29px;top:-17px;width:16px;height:20px;border:3px solid #d7a94b;border-bottom:0;border-radius:8px 8px 0 0}
+.christmas-snow{position:absolute;color:rgba(255,255,255,.76);font-size:1.3rem}.snow-one{top:5%;left:15%}.snow-two{right:26%;bottom:3%;font-size:1rem}.snow-three{right:1%;top:48%;font-size:1.8rem}
+.campaign-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0 60px}
+.campaign-pill{display:flex;align-items:center;gap:11px;padding:15px 18px;border:1px solid #eadfd1;border-radius:15px;background:rgba(255,253,250,.82);color:var(--muted);font-size:.82rem}
+.campaign-pill i{color:var(--berry);font-size:1.15rem}.campaign-pill strong{display:block;color:var(--ink);font-size:.84rem}
+.section-heading{display:flex;justify-content:space-between;align-items:end;gap:25px;margin:0 0 25px}
+.section-heading h2{margin-top:5px;font-family:'Playfair Display',serif;color:var(--forest-dark);font-size:clamp(2rem,4vw,3rem);line-height:1.05;letter-spacing:-1px}
+.section-heading>p{max-width:340px;color:var(--muted);font-size:.9rem;text-align:right}
+.christmas-label{display:flex;align-items:center;gap:9px;color:var(--berry);font-size:.74rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase}.christmas-label span{width:24px;height:2px;background:var(--berry)}
+.gift-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.gift-card{display:grid;grid-template-columns:175px minmax(0,1fr);gap:20px;align-items:center;min-height:235px;padding:16px;border:1px solid #e8ddd0;border-radius:23px;background:var(--snow);box-shadow:0 11px 28px rgba(62,46,32,.045);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.gift-card:hover{transform:translateY(-4px);border-color:#d2b17c;box-shadow:0 18px 38px rgba(62,46,32,.1)}
+.gift-image{display:flex;align-items:center;justify-content:center;overflow:hidden;align-self:stretch;min-height:200px;border-radius:16px;background:#f6f2ee}.gift-image img{width:100%;height:100%;object-fit:cover;mix-blend-mode:multiply;transition:transform .35s ease}.gift-card:hover .gift-image img{transform:scale(1.045)}
+.gift-copy{min-width:0}.gift-category{display:inline-flex;margin-bottom:8px;padding:5px 9px;border-radius:999px;background:#f8e9dc;color:var(--berry);font-size:.65rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase}.gift-copy h3{margin-bottom:8px;color:var(--ink);font-size:1.08rem;line-height:1.18}.gift-copy p{margin-bottom:11px;color:var(--muted);font-size:.79rem;line-height:1.45}.gift-price{display:block;margin-bottom:12px;color:var(--berry);font-size:.95rem;font-weight:800}.gift-buy{display:inline-flex;align-items:center;gap:7px;padding:9px 12px;border-radius:999px;background:var(--forest-dark);color:#fff!important;font-size:.69rem;font-weight:800;transition:background .2s ease,transform .2s ease}.gift-buy:hover{background:var(--berry);transform:translateY(-2px)}
+.budget-panel{display:grid;grid-template-columns:1.1fr 1fr 1fr 1fr;gap:12px;margin-top:55px;padding:28px;border-radius:24px;background:var(--forest-dark);color:#fff}.budget-intro h2{margin-bottom:7px;font-family:'Playfair Display',serif;font-size:1.6rem}.budget-intro p{color:rgba(255,255,255,.67);font-size:.78rem}.budget-option{padding:15px 16px;border:1px solid rgba(255,255,255,.17);border-radius:16px;background:rgba(255,255,255,.06)}.budget-option strong{display:block;margin-bottom:5px;color:#f0c96f;font-size:.9rem}.budget-option span{color:rgba(255,255,255,.72);font-size:.76rem;line-height:1.35}
+.christmas-note{margin:35px auto 0;max-width:760px;color:var(--muted);font-size:.75rem;text-align:center}.christmas-note i{color:var(--berry);margin-right:4px}
+@media(max-width:900px){.christmas-hero{grid-template-columns:1fr;padding:45px 35px}.christmas-art{min-height:245px;margin-top:-18px}.christmas-gift{left:31%}.christmas-bauble{right:17%}.gift-grid{grid-template-columns:1fr}.budget-panel{grid-template-columns:1fr 1fr}.budget-intro{grid-column:1 / -1}}
+@media(max-width:620px){.christmas-page{padding:20px 16px 60px}.christmas-hero{min-height:610px;padding:34px 24px;border-radius:25px}.christmas-copy h1{font-size:3.05rem;letter-spacing:-1.5px}.christmas-copy>p:not(.christmas-eyebrow){font-size:.92rem}.christmas-art{min-height:225px}.christmas-gift{left:15%;width:155px;height:140px}.christmas-gift:before{width:178px}.christmas-gift:after{left:59px}.christmas-bauble{right:4%;width:64px;height:64px}.campaign-strip{grid-template-columns:1fr;margin-bottom:42px}.section-heading{display:block}.section-heading>p{margin-top:12px;text-align:left}.gift-card{grid-template-columns:1fr;gap:13px}.gift-image{min-height:220px;height:220px}.gift-copy{padding:0 4px 5px}.budget-panel{grid-template-columns:1fr;padding:22px}.budget-intro{grid-column:auto}}
